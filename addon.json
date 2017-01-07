@@ -1,0 +1,24 @@
+{
+	"title"		:	"Spacebuild extensions - SB3 life support models",
+	"type"		:	"model",
+	"tags"		:	[ "build", "fun" ],
+	"description":	"Spacebuild extensions - all sb3 models and materials",
+	"ignore"	:
+	[
+		"*.psd",
+		"*.vcproj",
+		"*.svn*",
+		"*.txt",
+		".git*",
+		"docs/*",
+		"spacebuild.iml",
+		"spacebuild.ipr",
+		"LICENSE",
+		"NOTICE",
+		"*.md",
+		"*.gma",
+		"*.jpg",
+		".luacheckrc",
+		"*.yml"
+	]
+}
