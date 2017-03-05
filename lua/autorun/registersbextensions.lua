@@ -288,9 +288,38 @@ local function initResourceNodes(SB)
     )
 end
 
+local function initWaterPumps(SB)
+    local category = "Storage"
+    SB:registerDeviceInfo(
+        category,
+        "CE Medium Water Pump",
+        "resource_generator_water_pump",
+        "models/ce_ls3additional/water_pump/water_pump.mdl",
+        function(ent)
+            ent.rdobject:generatesResource("water", 300, 0)
+            ent.rdobject:requiresResource("energy", 15, 5)
+            SB.util.wire.registerDefaultOutputs(ent, true, {"WaterRate", "EnergyRate"})
+            SB.util.wire.registerDefaultInputs(ent, true)
+        end
+    )
+    SB:registerDeviceInfo(
+        category,
+        "CS Large Water Pump",
+        "resource_generator_water_pump",
+        "models/chipstiks_ls3_models/LargeH2OPump/largeh2opump.mdl",
+        function(ent)
+            ent.rdobject:generatesResource("water", 500, 0)
+            ent.rdobject:requiresResource("energy", 30, 10)
+            SB.util.wire.registerDefaultOutputs(ent, true, {"WaterRate", "EnergyRate"})
+            SB.util.wire.registerDefaultInputs(ent, true)
+        end
+    )
+end
+
 local function initTools(SB)
     initEnergyStorageTools(SB)
     initResourceNodes(SB)
+    initWaterPumps(SB)
 end
 if SPACEBUILD then
     initTools(SPACEBUILD)
