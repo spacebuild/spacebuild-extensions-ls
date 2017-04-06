@@ -17,6 +17,7 @@
 AddCSLuaFile()
 local function initTools(SB)
     if not SB then SB = SPACEBUILD end
+    if not SB then print("Could not register spacebuild life support extensions\n") return end
     SB:registerExtensionsLS()
 end
 if SPACEBUILD then
