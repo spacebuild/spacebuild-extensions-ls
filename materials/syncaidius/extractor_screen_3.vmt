@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	$baseTexture "syncaidius/extractor_screen_3"
+	$surfaceprop "metal"
+}

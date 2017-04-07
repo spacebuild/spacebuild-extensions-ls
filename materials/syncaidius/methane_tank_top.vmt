@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "syncaidius/methane_tank_top"
+	"$bumpmap" "syncaidius/tanktop_norm"
+	"$nocull" 1
+	"$phong" "1" 
+	"$phongboost" "0.35" 
+	"$phongfresnelranges" "[ 1 5 20]"
+	"$phongexponent" "20"
+	"$model" 1
+
+}
